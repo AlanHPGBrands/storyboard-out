@@ -1,0 +1,13 @@
+{
+    "name"                : "SPECTRA+"      ,
+    "short_name"          : "SPECTRA+"          ,
+    "start_url"           : "/"             ,
+    "display"             : "standalone"    ,
+    "theme_color"         : "#5310fe"       ,
+    "background_color"    : "#5310fe"       ,
+    "icons"               : [ {
+                                "src"   : "hpg512x512.png",
+                                "sizes" : "512x512",
+                                "type"  : "image/png"
+                            } ]
+}

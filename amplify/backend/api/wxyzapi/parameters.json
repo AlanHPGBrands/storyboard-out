@@ -1,0 +1,7 @@
+{
+  "AppSyncApiName": "wxyzapi",
+  "DynamoDBBillingMode": "PAY_PER_REQUEST",
+  "DynamoDBEnableServerSideEncryption": false,
+  "APIKeyExpirationEpoch": 1672609357,
+  "CreateAPIKey": 1
+}

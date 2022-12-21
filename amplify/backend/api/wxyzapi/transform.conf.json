@@ -1,0 +1,20 @@
+{
+    "Version": 5,
+    "ElasticsearchWarning": true,
+    "StackMapping": {
+        "QueryiboByResId2Resolver": "ImageBrandObjectBackup",
+        "QueryiboByCreatedAt2Resolver": "ImageBrandObjectBackup",
+        "QueryiboByEmail2Resolver": "ImageBrandObjectBackup",
+        "QueryiboByCreatedAt2MsResolver": "ImageBrandObjectBackup",
+        "QueryfinByResIdResolver": "IdFinalsLoc",
+        "QuerylogoByResultIdResolver": "logoPortal",
+        "QuerylogoByCreatedAtResolver": "logoPortal",
+        "QuerylogoByEmailResolver": "logoPortal",
+        "QuerylogoByUserNameResolver": "logoPortal",
+        "QuerylogoByBrandResolver": "logoPortal",
+        "QuerylogoByProcByResolver": "logoPortal",
+        "QuerylogoByInputResolver": "logoPortal",
+        "QuerylogoByCreatedAtFltResolver": "logoPortal",
+        "QuerystoryByEmailResolver": "StoryboardEmail"
+    }
+}

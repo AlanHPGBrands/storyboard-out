@@ -1,0 +1,237 @@
+
+.landing {
+    font-size:6rem;
+}
+
+.landingtoo {
+    font-size:7rem;
+}
+.landing {
+    animation-duration:8s;
+    animation-name:dispear;
+}
+
+.landingtoo {
+    animation-duration: 8s;
+    animation-name: slidein;
+}
+
+@keyframes dispear {
+    from {
+        opacity : 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+@keyframes slidein {
+    from {
+      /* margin-left: 100%; */
+      left:100vw;
+      width: 100%;
+    }
+  
+    to {
+      /* margin-left: 10%; */
+      left:10vw;
+      /* margin-left:10vw; */
+      width: 100%;
+    }
+  }
+
+
+
+
+.App {
+    text-align: center;
+    font-family: 'Montserrat';
+}
+
+.App-logo {
+    height: 40vmin;
+    pointer-events: none;
+}
+
+
+.visually-hidden {
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+}
+    
+
+/* Separate rule for compatibility, :focus-within is required on modern Firefox and Chrome */
+input.visually-hidden:focus + label {
+    outline: thin dotted;
+    }
+input.visually-hidden:focus-within + label {
+    outline: thin dotted;
+    }
+    
+svg > a {
+    opacity:1;
+}
+    #s0svg:hover {
+        opacity : .7;
+    }
+
+    #s1svg:hover {
+        opacity : .7;
+    }
+
+    #s2svg:hover {
+        opacity : .7;
+    }
+
+    #s3svg:hover {
+        opacity : .7;
+    }
+    
+#s4svg:hover {
+    opacity : .7;
+}
+
+
+#s5svg:hover {
+    opacity : .7;
+}
+
+
+#s6svg:hover {
+    opacity : .7;
+}
+
+                
+#co0:hover {
+    transform : scale(1.2);
+}
+
+
+
+#co00:hover {
+    background-color:  transparent;
+    width  : 120%!important;
+    height : 120%!important;
+    box-shadow : 'rgb(0, 22, 137) 0px 0px 0px 13px inset' ,
+
+}
+
+
+
+.svgClickableA:hover {
+    caret-color : blue!important;
+}
+
+.svgcloud2 {
+    position : fixed;
+    stroke : white;
+    top : 20vh;
+    left : 30vw;
+    fill: #5310fe!important;
+    opacity : .35;
+    filter : blur( 2px );
+    border-color: #e4e6e2!important;
+    line-height: 4.5rem;
+    stroke : none;
+    stroke-width: 3px;
+    height : 40vh;
+    width : 40vw;
+    margin-top:10px;
+    transition: all .7s cubic-bezier(.1,0,.33,1.25) 0ms;
+}
+
+.svgcloud2:hover {
+    cursor: pointer;
+    filter: blur( .5px );
+    height : 50vh;
+    fill: #5310fe!important;
+    opacity : .85;
+    margin-top : 20px;
+    top:15vh;
+}
+   
+.svgcloud3 {
+    z-index: 99;
+    /* position : absolute; */
+    stroke : white;
+    /* top : 12vh;
+    left : 3vw; */
+    fill: #5310fe!important;
+    opacity : .35;
+    filter : blur( 2px );
+    border-color: #e4e6e2!important;
+    line-height: 4.5rem;
+    stroke : none;
+    stroke-width: 3px;
+    height : 7vh;
+    width : 7vw;
+    margin-top:10px;
+    transition: all .7s cubic-bezier(.1,0,.33,1.25) 0ms;
+}
+
+.svgcloud3:hover {
+    cursor: pointer;
+    filter: blur( .5px );
+    height : 8vh;
+    width : 8vw;
+    fill: #5310fe!important;
+    opacity : .85;
+    margin-top : 5px;
+}
+
+.less-padding {
+    padding : .5rem .25rem;
+}
+
+.bordered {
+    border : 1px solid gray;
+    border-radius : .5rem;
+}
+pre { white-space: pre-wrap; }
+.coderBabe {
+    background-color : #373737;
+    color : #ff5ad6;
+    font-size : .75em;
+    overflow: hidden;
+}
+
+.App-header {
+    background-color: #3e4b66;
+    /* min-height: 65vh; */
+    /* width : 60vw; */
+    /* margin-left : 40vw; */
+    /* display: flex;
+    flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+    font-size: calc( 10px + 2vmin );
+    color: white;
+}
+
+/* .ScideBer {
+    background-color: white;
+    min-height: 65vh;
+    width : 40vw;
+    margin-left : 0vw;
+    position : fixed;
+    top : 0px;
+    align-items: center;
+    justify-content: center;
+    font-size: .95rem;
+    color: black;
+} */
+
+.App-link {
+    color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate( 0deg );
+    }
+    to {
+        transform: rotate( 360deg );
+    }
+}

@@ -1,0 +1,113 @@
+.darkerPurple:hover {
+    background-color:#6d3abc;
+    border:none;
+}
+
+
+
+
+.darkerPurple {
+    background-color:#4700b3;
+    border:none;
+}
+
+.grotesk{
+    font-family:'Typo Grotesk Bold'
+}
+
+.opacOverlay {
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    opacity:0;
+    z-index:99999;
+    background-color:red;
+}
+
+
+.opacOverlay:hover {
+    background-color:red;
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    opacity:.7;
+    z-index:99999;
+}
+.Row {
+    align-items: center!important;
+}
+
+@media only screen and (max-width: 600px) {
+    .hideSmall {
+        display: none;
+    }
+}
+
+
+.btn-primary.disabled, .btn-primary:disabled {
+    color: #fff;
+    /* background-color: #007bff; */
+    background-color: inherit;
+    border-color: inherit;
+}
+
+
+@media only screen and (max-width: 3000px) {
+    .maxyPad {
+        width:16vw;
+        background-color:white;
+        max-width:16vw
+    } 
+    .miniPad {
+        min-width:15vw;
+        min-height:14.6vw;
+    } }
+@media only screen and (max-width: 1200px) {
+    .maxyPad {
+        width:25vw;
+        background-color:white;
+        max-width:25vw
+    } 
+    .miniPad {
+        min-width:14.6vw;
+        min-height:14.6vw;
+    } }
+@media only screen and (max-width: 992px)  
+{
+    .maxyPad {
+        width:33vw;
+        background-color:white;
+        max-width:33vw
+    } 
+    .miniPad {min-width:23vw;min-height:23vw;} }
+@media only screen and (max-width: 768px)  
+{
+    .maxyPad {
+        width:50vw;background-color:white;
+    max-width:50vw
+} 
+    .miniPad {
+        min-width:31vw;
+        min-height:31vw;} }
+@media only screen and (max-width: 576px)  
+{
+    .maxyPad {
+        width:98vw;background-color:white;
+    max-width:98vw} 
+    .miniPad {min-width:48vw;min-height:48vw;} }
+
+
+@media only screen and (max-width: 576px)  {.storyboardcontainer {top:'0px'}}
+/* .storyboardcontainer {top:'0px'}} */
+/* @media only screen and (max-width: 1200px) {.maxyPad {max-width:16.6vw} .miniPad {min-width:14.6vw;min-height:14.6vw;} }
+@media only screen and (max-width: 992px)  {.maxyPad {max-width:25vw} .miniPad {min-width:23vw;min-height:23vw;} }
+@media only screen and (max-width: 768px)  {.maxyPad {max-width:33vw} .miniPad {min-width:31vw;min-height:31vw;} }
+@media only screen and (max-width: 576px)  {.maxyPad {max-width:50vw} .miniPad {min-width:48vw;min-height:48vw;} } */
+
+
+
+

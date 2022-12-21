@@ -1,0 +1,295 @@
+type IdEmail @model {
+    id: ID!
+    email: String
+    resultid: String
+}
+
+
+type ProIdEmail @model
+@key(name : "byResId" , fields : [ "resultid" ] , queryField : "byResId" ) {
+    id : ID!
+    email : String!
+    resultid : String!
+}
+
+
+type IdFinLocation @model
+@key(name : "finalsByResultidsPlease" , fields : [ "resultid" , "id" ] , queryField : "finalsByResultidsPlease" ) {
+    id : String!
+    finals_location : String!
+    resultid : String!
+}
+
+
+type ImageBrandObject @model 
+@key(name : "ibObyResId" , fields : [ "resultid" ] , queryField : "iboByResId" ) {
+    id : ID!
+    email : String!
+    resultid : String!
+    img_orig_filename : String!
+    brand : String!
+    img_cloud_url : String!
+    img_cloud_url_o : String!
+    input_name : String!
+    phone : String!
+    processedFile : Boolean!
+}
+
+
+type ImageBrandObjectBackup2 @model 
+  @key( name : "iboByResId2" ,        fields : [ "resultid"  , "id" ] , queryField : "iboByResId2"        )
+  @key( name : "iboByCreatedAt2" ,    fields : [ "createdAt" ,   "id" ] , queryField : "iboByCreatedAt2"    )
+  @key( name : "iboByEmail2" ,        fields : [ "email"     ,   "id" ] , queryField : "iboByEmail2"        ) 
+  @key( name : "iboByCreatedAt2Ms" ,  fields : [ "createdAt2Ms", "processingFile" ] , queryField : "iboByCreatedAt2Ms"  ) 
+{
+    id :                    ID!
+    email :                 String!
+    resultid :              String!
+    img_orig_filename :     String!
+    brand :                 String!
+    img_cloud_url :         String!
+    img_cloud_url_o :       String!
+    input_name :            String!
+    phone :                 String!
+    processedFile :         String!
+    createdAt :             AWSDateTime!
+    createdAt2Ms :          Float!
+    processingFile :        String!
+}
+
+
+type inkLogo @model 
+  @key( name : "inkLogoByResultId"  , fields : [ "result_id"        , "createdAt"   ] , queryField : "inkLogoByResultId"    )
+  @key( name : "inkLogoByPing"      , fields : [ "processing_file"  , "createdAt"   ] , queryField : "inkLogoByPing"        )
+  @key( name : "inkLogoByPred"      , fields : [ "processed_file"   , "createdAt"   ] , queryField : "inkLogoByPred"        )
+  @key( name : "inkLogoByEmail"     , fields : [ "email"            , "createdAt"   ] , queryField : "inkLogoByEmail"       )
+  @key( name : "inkLogoByLogoName"  , fields : [ "logo_name"        , "createdAt"   ] , queryField : "inkLogoByLogoName"    )
+  @key( name : "inkLogoByTesseract" , fields : [ "tesseract"        , "createdAt"   ] , queryField : "inkLogoByTesseract"   )
+{
+    id :                    String!
+    createdAt :             AWSDateTime!
+    created_at_flt :        Float!
+    processing_file :       String!
+    processed_file :        String!
+    proc_at :               String!
+    proc_by :               String!
+    email :                 String!
+    email2 :                String!
+    input_name :            String!
+    result_id :             String!
+    brand :                 String!
+    category :              String!
+    brands :                String!
+    phone :                 String!
+    user_name :             String!
+    img_orig_filename :     String!
+    img_cloud_url_o :       String!
+    logo_named :            String!
+    logo_name :             String!
+    tesseract :             String!
+}
+
+
+type earlyStuffs2 @model 
+  @key( name : "earlyStuffs2ByResultId"  , fields : [ "result_id"        , "createdAt"   ] , queryField : "earlyStuffs2ByResultId"    )
+  @key( name : "earlyStuffs2ByPing"      , fields : [ "processing_file"  , "createdAt"   ] , queryField : "earlyStuffs2ByPing"        )
+  @key( name : "earlyStuffs2ByPred"      , fields : [ "processed_file"   , "createdAt"   ] , queryField : "earlyStuffs2ByPred"        )
+  @key( name : "earlyStuffs2ByLogoName"  , fields : [ "logo_name"        , "createdAt"   ] , queryField : "earlyStuffs2ByLogoName"    )
+  @key( name : "earlyStuffs2ByTesseract" , fields : [ "tesseract"        , "createdAt"   ] , queryField : "earlyStuffs2ByTesseract"   )
+  @key( name : "earlyStuffs2ByPopColor"  , fields : [ "pop_color"        , "createdAt"   ] , queryField : "earlyStuffs2ByPopColor"   )
+{
+    id :                    String!
+    createdAt :             AWSDateTime!
+    created_at_flt :        Float!
+    processing_file :       String
+    processed_file :        String
+    proc_at :               String
+    proc_by :               String
+    email :                 String
+    email2 :                String
+    input_name :            String
+    result_id :             String
+    brand :                 String
+    category :              String
+    brands :                String
+    phone :                 String
+    user_name :             String
+    img_orig_filename :     String
+    img_cloud_url_o :       String
+    logo_named :            String
+    logo_name :             String
+    tesseract :             String
+    square_svg_url :        String
+    unsquare_svg_url :      String
+    palette :               String
+    pop_color :             String
+    static : String
+    ink_logo :              inkLogo @connection( fields : [ "id" ] )
+}
+
+
+type namedLogo @model 
+  @key( name : "namedLogoByNamed" ,               fields : [ "named"    ,   "id" ] ,                queryField : "namedLogoByResultId"         )
+  @key( name : "namedLogoByCreatedAt" ,           fields : [ "createdAt" ,  "id" ] ,                queryField : "namedLogoByCreatedAt"        )
+  @key( name : "namedLogoByEmail" ,               fields : [ "email"     ,  "id" ] ,                queryField : "namedLogoByEmail"            ) 
+  @key( name : "namedLogoByMisc0" ,               fields : [ "misc_0"     , "id" ] ,                queryField : "namedLogoByMisc0"            ) 
+  @key( name : "namedLogoByMisc1" ,               fields : [ "misc_1"     , "id" ] ,                queryField : "namedLogoByMisc1"            ) 
+  @key( name : "namedLogoByMisc2" ,               fields : [ "misc_2"     , "id" ] ,                queryField : "namedLogoByMisc2"            ) 
+{
+    id :                    String!
+    createdAt :             AWSDateTime!
+    created_at_flt :        Float!
+    email :                 String!
+    input_name :            String!
+    result_id :             String!
+    user_name :             String!
+    img_orig_filename :     String!
+    img_cloud_url_o :       String!
+    img_cloud_url :         String!
+    named :                 String!
+    misc_0 :                String
+    misc_1 :                String
+    misc_2 :                String
+}
+
+
+type named @model 
+  @key( name : "namedByVctrzdSortCreatedFlt"        , fields : [ "vectorized"           , "created_at_flt"  ] , queryField : "namedByVctrzdSortCreatedFlt"          )
+  @key( name : "namedByVctrzdSortNamed"             , fields : [ "vectorized"           , "named"           ] , queryField : "namedByVctrzdSortName"                )
+  @key( name : "namedByVctrzdSortEmail"             , fields : [ "vectorized"           , "email"           ] , queryField : "namedByVctrzdSortEmail"               )
+  @key( name : "namedByEmailSentSortCreatedFlt"     , fields : [ "email_sent"           , "created_at_flt"  ] , queryField : "namedByEmailSentSortCreatedFlt"       )
+  @key( name : "namedByStaticSortCreatedFlt"        , fields : [ "static"               , "created_at_flt"  ] , queryField : "namedByStaticSortCreatedFlt"          )
+  @key( name : "namedByStaticSortNamed"             , fields : [ "static"               , "named"           ] , queryField : "namedByStaticSortNamed"               )
+  @key( name : "namedByStaticSortEmail"             , fields : [ "static"               , "email"           ] , queryField : "namedByStaticSortEmail"               )
+  @key( name : "namedByResultIdSortCreatedFlt"      , fields : [ "result_id"            , "created_at_flt"  ] , queryField : "namedByResultIdSortCreatedFlt"        )
+  @key( name : "namedByProcessingSortCreatedFlt"    , fields : [ "processing"           , "created_at_flt"  ] , queryField : "namedByProcessingSortCreatedFlt"      )
+  @key( name : "namedByProcessedSortCreatedFlt"     , fields : [ "processed"            , "created_at_flt"  ] , queryField : "namedByProcessedSortCreatedFlt"       )
+  @key( name : "namedByCreatedFltDaySortCreatedFlt" , fields : [ "created_at_flt_day"   , "created_at_flt"  ] , queryField : "namedByCreatedFltDaySortCreatedFlt"   )
+  @key( name : "namedByCreatedFltDaySortNamed"      , fields : [ "created_at_flt_day"   , "named"           ] , queryField : "namedByCreatedFltDaySortNamed"        )
+  @key( name : "namedByMisc0"                       , fields : [ "misc_0"               , "created_at_flt"  ] , queryField : "namedByMisc0"                         )
+  @key( name : "namedByMisc1"                       , fields : [ "misc_1"               , "created_at_flt"  ] , queryField : "namedByMisc1"                         )
+  @key( name : "namedByMisc2"                       , fields : [ "misc_2"               , "created_at_flt"  ] , queryField : "namedByMisc2"                         )
+{
+    id :                    String!
+    createdAt :             AWSDateTime!
+    created_at_flt :        Float!
+    named :                 String!
+    email :                 String!
+    input_name :            String!
+    result_id :             String!
+    user_name :             String!
+    created_at_flt_day :    Float
+    img_orig_filename :     String
+    img_cloud_url_o :       String
+    img_cloud_url :         String
+    misc_0 :                String
+    misc_1 :                String
+    misc_2 :                String
+    vectorized :            String
+    email_sent :            String
+    static :                String
+    processed :             String
+    processing :            String
+}
+
+
+type S3Object {
+  bucket: String!
+  region: String!
+  key: String!
+}
+
+
+type SvgObjectsArray @model
+  @key( name : "svgsByResultId", fields :["result_id"],queryField:"svgsByResultId")
+  @key( name : "svgsByEmail", fields :["email"],queryField:"svgsByEmail")
+  @key( name : "svgsByEmailSortLogoType", fields :["email","logotype"],queryField:"svgsByEmailSortLogoType")
+  @key( name : "svgsByLogoTypeSortEmail", fields :["logotype","email"],queryField:"svgsByLogoTypeSortEmail")
+{
+id: String!
+data: String!
+result_id: String
+logo_url: String
+email: String
+logotype: String
+}
+
+
+type StoryboardEmail @model
+  {id: String!
+  distributorID: String
+  content: String
+  email : String
+  recipientEmail: String
+  storyId : String
+  storyUserID: String
+  static: String
+}
+
+
+type Storyboard @model
+  @key(name:"byStoryUser", fields: ["storyUserID"])
+  @key(name:"storyByEmail", fields: ["email","created_at_flt"],queryField:"storyByEmail")
+  {
+  id: String!
+  distributorID: String
+  created_at_flt: Float
+  content: String
+  catalogData: String
+  logoGqlId: String
+  distributorLogoGqlId: String
+  email : String
+  phone_number: String
+  storyUserID: String
+  static: String
+  name : String
+  showPrices: String
+  showName: String
+  showEmail: String
+  showMoq: String
+  useCAD: String
+}
+
+
+type StoryboardProduct @model
+@key(name:"prodByNumberSortName", fields: ["item_number","item_name"],queryField:"prodByNumberSortName")
+@key(name:"prodByBrandSortName", fields: ["brand","item_name"],queryField:"prodByBrandSortName")
+@key(name:"prodByBrandSortKeywords", fields: ["brand","keywords"],queryField:"prodByBrandSortKeywords")
+@key(name:"prodByStaticSortKeywords", fields: ["static", "keywords"],queryField:"prodByStaticSortKeywords")
+@key(name:"prodByStaticSortName", fields: ["static","item_name"],queryField:"prodByStaticSortName")
+@key(name:"prodByStaticSortNumber", fields: ["static","item_number"],queryField:"prodByStaticSortNumber")
+@key(name:"prodByStaticSortBrand", fields: ["static","brand"],queryField:"prodByStaticSortBrand")
+@key(name:"prodByProdFile", fields: ["prodFileExists","item_number"],queryField:"prodByProdFile")
+@key(name:"prodByProdFileSortBrand", fields: ["prodFileExists","brand"],queryField:"prodByProdFileSortBrand")
+@key(name:"prodByProdFileSortTop20", fields: ["prodFileExists","top20"],queryField:"prodByProdFileSortTop20")
+@key(name:"prodByTop20", fields: ["top20"],queryField:"prodByTop20") {
+  id: String!
+  item_number: String
+  item_name: String
+  brand: String
+  catalog_section: String
+  item_description: String
+  keywords: String
+  url: String
+  custom: String
+  static: String
+  log: String
+  prodFileExists: String
+  prodFileKey: String
+  prodColorOptions: String
+  bgFileExists: String
+  bgFileKey: String
+  ovrFileExists: String
+  ovrFileKey: String
+  emblFileExists: String
+  imprintData: String
+  imprintDataArray: String
+  colors: String
+  verticals: String
+  lchRanges: String
+  top20: String
+  price: String
+  moq:String
+  code:String
+  eqp_can: String
+}
